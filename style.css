@@ -8,7 +8,7 @@
 /* ——— Шрифты ——— */
 @font-face {
   font-family: 'Lady Marmalade';
-  src: url('assets/fonts/Lady Marmalade.otf') format('opentype');
+  src: url('./assets/fonts/Lady Marmalade.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Rosa Marena';
-  src: url('assets/fonts/rosamarena.ttf') format('truetype');
+  src: url('./assets/fonts/rosamarena.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -587,7 +587,7 @@ span, p{
 /* ——— Дресс-код ——— */
 /* ——— Дресс-код: фон на всю ширину ——— */
 .dresscode-section {
-  background-image: url('../assets/img/dresscode/bcg4.png');
+  background-image: url('./assets/img/dresscode/bcg4.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
