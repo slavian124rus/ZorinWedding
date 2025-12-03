@@ -42,10 +42,10 @@ span, p {
 /* Адаптация для мобильных устройств (экран меньше 768px) */
 @media (max-width: 768px) {
   h1 {
-    font-size: 42px; /* Уменьшил с 64px */
+    font-size: 48px; /* Уменьшил с 64px */
   }
   h2 {
-    font-size: 36px; /* Уменьшил с 52px */
+    font-size: 40px; /* Уменьшил с 52px */
   }
   h3 {
     font-size: 32px; /* Уменьшил с 46px */
@@ -62,13 +62,13 @@ span, p {
 /* Дополнительная адаптация для очень маленьких экранов (опционально) */
 @media (max-width: 480px) {
   h1 {
-    font-size: 36px;
+    font-size: 48px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 40px;
   }
   h3 {
-    font-size: 28px;
+    font-size: 32px;
   }
   h4 {
     font-size: 24px;
