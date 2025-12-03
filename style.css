@@ -20,22 +20,63 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-h1{
+/* Стили для десктопов (базовые) */
+h1 {
   font-size: 64px;
 }
-h2{
+h2 {
   font-size: 52px;
 }
-h3{
+h3 {
   font-size: 46px;
 }
-h4{
+h4 {
   font-size: 36px;
 }
 
-span, p{
+span, p {
   font-family: 'Lady Marmalade', serif;
   font-size: 22px;
+}
+
+/* Адаптация для мобильных устройств (экран меньше 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 42px; /* Уменьшил с 64px */
+  }
+  h2 {
+    font-size: 36px; /* Уменьшил с 52px */
+  }
+  h3 {
+    font-size: 32px; /* Уменьшил с 46px */
+  }
+  h4 {
+    font-size: 28px; /* Уменьшил с 36px */
+  }
+  
+  span, p {
+    font-size: 18px; /* Уменьшил с 22px для лучшей читаемости */
+  }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (опционально) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  
+  span, p {
+    font-size: 16px;
+  }
 }
 
 /* ——— Главный блок: фон + текст ——— */
