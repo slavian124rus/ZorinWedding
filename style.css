@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Rosa Marena';
-  src: url('/assets/fonts/RosaMarena.ttf') format('truetype');
+  src: url('/assets/fonts/RosaMarena.woff') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -51,7 +51,7 @@ h4{
 
 span, p{
   font-family: 'Lady Marmalade', serif;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 /* ——— Главный блок: фон + текст ——— */
@@ -687,6 +687,9 @@ span, p{
   margin: 0;
 }
 
+.location-address strong{
+  font-size: 30px;
+}
 
 .location-link {
   color: var(--text-color);
@@ -961,11 +964,16 @@ span, p{
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 22px;
 }
 
 .rsvp-btn:hover {
   opacity: 0.9;
   transform: translateY(-2px);
+}
+
+.form-label{
+  font-size: 22px;
 }
 
 .rsvp-choice-btn {
