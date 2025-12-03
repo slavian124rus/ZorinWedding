@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Rosa Marena';
-  src: url('/assets/fonts/RosaMarena.woff') format('woff');
+  src: url('./assets/fonts/RosaMarena.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
