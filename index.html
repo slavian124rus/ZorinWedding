@@ -11,6 +11,7 @@
 
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
      <style>
@@ -42,19 +43,19 @@
         
         
         <!-- ГЛАВНЫЙ БЛОК: ТЕКСТ НА ФОНЕ -->
-        <div class="container-fluid hero-section d-flex align-items-center justify-content-center" style="min-height: 100vh; position: relative; overflow: hidden;">
+        <div class="container-fluid hero-section d-flex align-items-center justify-content-center" style="min-height: 100vh; position: relative; overflow: hidden;" >
             
             <!-- Убираем старый оверлей, т.к. теперь он общий -->
             <!-- <div class="hero-overlay"></div> -->
             
             <!-- Текстовый контент с анимацией -->
             <div class="hero-content text-center p-3 animate-on-scroll">
-                <h1 class="names-title animate-fade-up">Вячеслав & Светлана</h1>
-                <p class="invitation-text mt-3 animate-fade-up" style="animation-delay: 0.2s">
+                <h1 class="names-title" data-aos="fade-down" data-aos-duration="1200" >Вячеслав & Светлана</h1>
+                <p class="invitation-text mt-3"data-aos="fade-up" data-aos-duration="1300">
                     Дорогие друзья и родные!<br>
                     Приглашаем вас разделить с нами день нашей свадьбы.
                 </p>
-                <h3 class="date-text mt-4 animate-fade-up" style="animation-delay: 0.4s">27 февраля 2026</h3>
+                <h3 class="date-text mt-4" data-aos="fade-up" data-aos-duration="1400">27 февраля 2026</h3>
             </div>
         </div>
 
@@ -65,28 +66,28 @@
                 <!-- Календарь -->
                 <div class="calendar-wrapper">
                     <div class="weekdays d-flex justify-content-between mb-2">
-                        <span>ПН</span>
-                        <span>ВТ</span>
-                        <span>СР</span>
-                        <span>ЧТ</span>
-                        <span>ПТ</span>
-                        <span>СБ</span>
-                        <span>ВС</span>
+                        <span data-aos="fade-right" data-aos-duration="1400">ПН</span>
+                        <span data-aos="fade-right" data-aos-duration="1400">ВТ</span>
+                        <span data-aos="fade-right" data-aos-duration="1400">СР</span>
+                        <span data-aos="zoom-in" data-aos-duration="1400">ЧТ</span>
+                        <span data-aos="fade-left" data-aos-duration="1400">ПТ</span>
+                        <span data-aos="fade-left" data-aos-duration="1400">СБ</span>
+                        <span data-aos="fade-left" data-aos-duration="1400">ВС</span>
                     </div>
                     <div class="dates d-flex justify-content-between">
-                        <span>23</span>
-                        <span>24</span>
-                        <span>25</span>
-                        <span>26</span>
-                        <span class="date-heart">27</span>
-                        <span>28</span>
-                        <span>29</span>
+                        <span data-aos="fade-right" data-aos-duration="1400">23</span>
+                        <span data-aos="fade-right" data-aos-duration="1400">24</span>
+                        <span data-aos="fade-right" data-aos-duration="1400">25</span>
+                        <span data-aos="zoom-in" data-aos-duration="1400">26</span>
+                        <span class="date-heart" data-aos="fade-left" data-aos-duration="1400">27</span>
+                        <span data-aos="fade-left" data-aos-duration="1400">28</span>
+                        <span data-aos="fade-left" data-aos-duration="1400">29</span>
                     </div>
                 </div>
 
                 <!-- Счётчик -->
-                <h2 class="my-4">Осталось всего</h2>
-                <div class="countdown-wrapper my-4">
+                <h2 class="my-4"data-aos="zoom-in" data-aos-duration="1400">Осталось всего</h2>
+                <div class="countdown-wrapper my-4" data-aos="zoom-in" data-aos-duration="2400" >
                     <div class="countdown d-flex justify-content-center gap-2 flex-wrap">
                         <div class="count-item">
                             <div class="count-value days">--</div>
@@ -116,21 +117,21 @@
 
     <!-- БЛОК МЕСТО -->
     <div class="container py-4">
-        <div class="text-center mb-3">
+        <div class="text-center mb-3" data-aos="zoom-in" data-aos-duration="1400" >
             <h2 class="location-title">Место</h2>
         </div>
 
     <!-- Линия под заголовком -->
     <div class="location-divider mx-auto mb-3"></div>
 
-    <div class="text-center mb-4">
-        <p class="location-address">
+    <div class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1400">
+        <p class="location-address" >
         г. Красноярск, Судостроительная ул., 117А<br>
         <strong>«Сибирский Сафари клуб»</strong>
         </p>
         <!-- Линия под заголовком -->
         <div class="location-divider mx-auto mt-3"></div>
-            <p class="location-link">
+            <p class="location-link"  >
                 Место на карте: 
                 <a href="https://yandex.ru/maps/org/sibirskiy_safari_klub/1145542170/?ll=92.845752%2C55.989326&z=14" target="_blank" rel="noopener">Яндекс Карты</a> 
                 | 
@@ -140,7 +141,7 @@
 
     <!-- Фото/карта -->
         <div class="text-center">
-            <img src="assets/img/Place/i.webp" alt="Место проведения" class="location-photo img-fluid rounded">
+            <img src="assets/img/Place/i.webp" alt="Место проведения" class="location-photo img-fluid rounded" data-aos="zoom-in" data-aos-duration="1400">
         </div>
     </div>
 
@@ -148,7 +149,7 @@
         <!-- Контейнер для падающих сердец — только в этом блоке -->
         <div class="heart-fall-scene position-relative overflow-hidden" style="height: 100%;">
             
-            <div class="text-center my-4">
+            <div class="text-center my-4" data-aos="fade-right" data-aos-duration="1400">
                 <h2 class="program-title">Программа</h2>
             </div>
 
@@ -170,34 +171,34 @@
 
             <!-- Таймлайн остаётся внутри этого же контейнера -->
             <div class="main-timeline position-relative">
-            <div class="timeline left">
+            <div class="timeline left" data-aos="fade-right" data-aos-duration="1400">
                     <div class="card">
                         <h4>15:30</h4>
                         <p>Сбор гостей и знакомство с ведущим</p>
                     </div>
                 </div>
 
-                <div class="timeline right">
+                <div class="timeline right" data-aos="fade-left" data-aos-duration="1400">
                     <div class="card">
                         <h4>16:30</h4>
                         <p>Свадебная церемония</p>
                     </div>
                 </div>
 
-                <div class="timeline left">
+                <div class="timeline left" data-aos="fade-right" data-aos-duration="1400">
                     <div class="card">
                         <h4>17:00</h4>
                         <p>Праздничный банкет</p>
                     </div>
                 </div>
 
-                <div class="timeline right">
+                <div class="timeline right" data-aos="fade-left" data-aos-duration="1400">
                     <div class="card">
                         <h4>22:00</h4>
                         <p>Танцы</p>
                     </div>
                 </div>
-                <div class="timeline left">
+                <div class="timeline left" data-aos="fade-right" data-aos-duration="1400">
                     <div class="card">
                         <h4>23:00</h4>
                         <p>Завершение вечера</p>
@@ -207,74 +208,74 @@
         </div>
 
     <!-- БЛОК ДРЕСС-КОД -->
-    <section class="dresscode-section py-5">
-    <div class="container py-4">
-        <div class="text-center mb-4">
-        <h2 class="dresscode-title">Дресс-код</h2>
-        </div>
+    <section class="dresscode-section py-5" >
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="dresscode-title" data-aos="zoom-in" data-aos-duration="1400">Дресс-код</h2>
+            </div>
 
-        <div class="text-center mb-4">
-        <p class="dresscode-text">
-            Будем рады, если при выборе нарядов вы придержитесь цветовой гаммы нашей свадьбы.
-        </p>
-        </div>
+            <div class="text-center mb-4" data-aos="zoom-in" data-aos-duration="1400">
+                <p class="dresscode-text">
+                    Будем рады, если при выборе нарядов вы придержитесь цветовой гаммы нашей свадьбы.
+                </p>
+            </div>
 
-        <!-- Цветовые квадраты -->
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-        <div class="color-swatch-wrapper d-flex flex-column align-items-center">
-            <div class="color-swatch" style="background-color: #E4D4C3;"></div>
-            <span class="color-label">Льняной крем</span>
+            <!-- Цветовые квадраты -->
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <div class="color-swatch-wrapper d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="1400">
+                    <div class="color-swatch" style="background-color: #E4D4C3;"></div>
+                    <span class="color-label">Льняной крем</span>
+                </div>
+                <div class="color-swatch-wrapper d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="1800">
+                    <div class="color-swatch" style="background-color: #F2EDE6;"></div>
+                    <span class="color-label">Облачный белый</span>
+                </div>
+                <div class="color-swatch-wrapper d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="2100">
+                    <div class="color-swatch" style="background-color: #E2CFC4;"></div>
+                    <span class="color-label">Пыльная роза</span>
+                </div>
+                <!-- <div class="color-swatch-wrapper d-flex flex-column align-items-center">
+                    <div class="color-swatch" style="background-color: #D4C9D1;"></div>
+                    <span class="color-label">Лаванда-муар</span>
+                </div> -->
+                <div class="color-swatch-wrapper d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="2500">
+                    <div class="color-swatch" style="background-color: #CDDDD6;"></div>
+                    <span class="color-label">Мятный туман</span>
+                </div>
+                <div class="color-swatch-wrapper d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="2900">
+                    <div class="color-swatch" style="background-color: #CBD9DD;"></div>
+                    <span class="color-label">Серо-голубая дымка</span>
+                </div>
+            </div>
         </div>
-        <div class="color-swatch-wrapper d-flex flex-column align-items-center">
-            <div class="color-swatch" style="background-color: #F2EDE6;"></div>
-            <span class="color-label">Облачный белый</span>
-        </div>
-        <div class="color-swatch-wrapper d-flex flex-column align-items-center">
-            <div class="color-swatch" style="background-color: #E2CFC4;"></div>
-            <span class="color-label">Пыльная роза</span>
-        </div>
-        <!-- <div class="color-swatch-wrapper d-flex flex-column align-items-center">
-            <div class="color-swatch" style="background-color: #D4C9D1;"></div>
-            <span class="color-label">Лаванда-муар</span>
-        </div> -->
-        <div class="color-swatch-wrapper d-flex flex-column align-items-center">
-            <div class="color-swatch" style="background-color: #CDDDD6;"></div>
-            <span class="color-label">Мятный туман</span>
-        </div>
-        <div class="color-swatch-wrapper d-flex flex-column align-items-center">
-            <div class="color-swatch" style="background-color: #CBD9DD;"></div>
-            <span class="color-label">Серо-голубая дымка</span>
-        </div>
-        </div>
-    </div>
     </section>
     
     <!-- БЛОК ПОЖЕЛАНИЯ -->
-    <div class="container py-4">
-    <div class="text-center mb-3">
-        <h2 class="wishes-title">Пожелания</h2>
-    </div>
+    <div class="container py-4" data-aos="zoom-in" data-aos-duration="1400">
+        <div class="text-center mb-3">
+            <h2 class="wishes-title">Пожелания</h2>
+        </div>
 
-    <!-- Линия под заголовком -->
-    <div class="wishes-divider mx-auto mb-4"></div>
+        <!-- Линия под заголовком -->
+        <div class="wishes-divider mx-auto mb-4"></div>
 
-    <ul class="wishes-list list-unstyled">
-        <li class="wishes-item mb-3">
-        <span class="wishes-icon wishes-icon-ok">✓</span>
-        <span class="wishes-text">
-            Ваши улыбки и смех подарят нам незабываемое счастье в этот день, а пожелания в конвертах помогут осуществить наши мечты!
-        </span>
-        </li>
-        <li class="wishes-item">
-        <span class="wishes-icon wishes-icon-no">✕</span>
-        <span class="wishes-text">
-            Сразу после свадьбы мы улетаем в свадебное путешествие, поэтому мы не успеем насладиться красотой подаренных цветов и будем рады, если вместо цветов вы решите подарить нам бутылочку вышего любимого вина.
-        </span>
-        </li>
-    </ul>
+        <ul class="wishes-list list-unstyled">
+            <li class="wishes-item mb-3" data-aos="zoom-in" data-aos-duration="2900">
+                <span class="wishes-icon wishes-icon-ok">✓</span>
+                <span class="wishes-text">
+                    Ваши улыбки и смех подарят нам незабываемое счастье в этот день, а пожелания в конвертах помогут осуществить наши мечты!
+                </span>
+            </li>
+            <li class="wishes-item" data-aos="zoom-in" data-aos-duration="2900">
+                <span class="wishes-icon wishes-icon-no">✕</span>
+                <span class="wishes-text">
+                    Сразу после свадьбы мы улетаем в свадебное путешествие, поэтому мы не успеем насладиться красотой подаренных цветов и будем рады, если вместо цветов вы решите подарить нам бутылочку вышего любимого вина.
+                </span>
+            </li>
+        </ul>
 
     <!-- Фото -->
-    <div class="text-center mt-4">
+    <div class="text-center mt-4" ata-aos="zoom-in" data-aos-duration="3400">
         <img src="assets/img/Wishes/handswithring.jpg" alt="Руки с кольцами" class="wishes-photo img-fluid rounded">
     </div>
     </div>
@@ -282,9 +283,9 @@
     <!-- БЛОК КОНТАКТ КООРДИНАТОРА -->
     <div class="container py-4">
     <div class="coordinator-card text-center">
-        <h2 class="coordinator-title mb-3">Любой вопрос — решит координатор</h2>
-        <h3 class="coordinator-name">Анастасия</h3>
-        <p class="coordinator-text mb-3">
+        <h2 class="coordinator-title mb-3" data-aos="zoom-in" data-aos-duration="1400" >Любой вопрос — решит координатор</h2>
+        <h3 class="coordinator-name" data-aos="zoom-in" data-aos-duration="2100">Анастасия</h3>
+        <p class="coordinator-text mb-3" data-aos="zoom-in" data-aos-duration="2100">
             В день свадьбы она поможет со всем.<br>
             Если хотите сделать подарок, о котором не будут знать молодожёны —<br>
             обратитесь к координатору заранее.
@@ -293,23 +294,23 @@
         <div class="coordinator-links d-flex flex-wrap justify-content-center gap-2">
             <!-- WhatsApp -->
             <a href="https://wa.me/79233681511?text=Добрый%20день!%20По%20поводу%20свадьбы%20Светланы%20и%20Вячеслава%2027%20февраля." 
-                target="_blank" rel="noopener" class="coordinator-link">
+                target="_blank" rel="noopener" class="coordinator-link" data-aos="flip-left" data-aos-duration="1400">
                 <span><i class="bi bi-whatsapp"></i> WhatsApp</span>
             </a>
 
             <!-- Telegram -->
             <a href="https://t.me/+79233681511" 
-                target="_blank" rel="noopener" class="coordinator-link">
+                target="_blank" rel="noopener" class="coordinator-link" data-aos="flip-left" data-aos-duration="1400">
                 <span><i class="bi bi-telegram"></i> Telegram</span>
             </a>
 
             <!-- Телефон -->
-            <a href="tel:+79233681511" class="coordinator-link">
+            <a href="tel:+79233681511" class="coordinator-link" data-aos="flip-left" data-aos-duration="1400">
                 <span><i class="bi bi-telephone"></i> Звонок</span>
             </a>
 
             <!-- Копировать номер -->
-            <a class="coordinator-link coordinator-copy" id="copyBtn">
+            <a class="coordinator-link coordinator-copy" id="copyBtn" data-aos="flip-left" data-aos-duration="1400" >
                 <span><i class="bi bi-clipboard-heart-fill"></i> Скопировать</span>
             </a>
         </div>
@@ -318,80 +319,80 @@
 
     <!-- БЛОК RSVP -->
     <div class="container py-4">
-    <div class="text-center mb-4">
-        <h2 class="rsvp-title">Подтвердите участие</h2>
-    </div>
-
-    <div class="rsvp-form-wrapper">
-        <!-- Шаг 1: Имя -->
-        <div class="rsvp-step active" id="step-1">
-        <div class="form-group">
-            <label for="name" class="form-label">Ваше имя</label>
-            <input type="text" id="name" class="form-control rsvp-input" placeholder="">
-        </div>
-        <button type="button" class="btn rsvp-btn mt-3" onclick="nextStep(1)">Далее</button>
+        <div class="text-center mb-4" data-aos="fade-right">
+            <h2 class="rsvp-title">Подтвердите участие</h2>
         </div>
 
-        <!-- Шаг 2: Присутствие -->
-        <div class="rsvp-step" id="step-2">
-        <p class="rsvp-question">Будете ли вы на нашей свадьбе?</p>
-        <div class="btn-group d-flex flex-column gap-2" role="group">
-            <button type="button" class="btn rsvp-choice-btn" onclick="handlePresence(true)">Да, с радостью!</button>
-            <button type="button" class="btn rsvp-choice-btn" onclick="handlePresence(false)">К сожалению, нет</button>
-        </div>
-        </div>
+        <div class="rsvp-form-wrapper" data-aos="fade-right">
+            <!-- Шаг 1: Имя -->
+            <div class="rsvp-step active" id="step-1">
+            <div class="form-group">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" id="name" class="form-control rsvp-input" placeholder="">
+            </div>
+            <button type="button" class="btn rsvp-btn mt-3" onclick="nextStep(1)">Далее</button>
+            </div>
 
-        <!-- Шаг 3: Алкоголь -->
-        <div class="rsvp-step" id="step-3">
-        <p class="rsvp-question">Будете ли вы употреблять алкоголь?</p>
-        <div class="btn-group d-flex flex-column gap-2" role="group">
-            <button type="button" class="btn rsvp-choice-btn" onclick="handleAlcohol(true)">Да</button>
-            <button type="button" class="btn rsvp-choice-btn" onclick="handleAlcohol(false)">Нет</button>
-        </div>
-        </div>
+            <!-- Шаг 2: Присутствие -->
+            <div class="rsvp-step" id="step-2">
+            <p class="rsvp-question">Будете ли вы на нашей свадьбе?</p>
+            <div class="btn-group d-flex flex-column gap-2" role="group">
+                <button type="button" class="btn rsvp-choice-btn" onclick="handlePresence(true)">Да, с радостью!</button>
+                <button type="button" class="btn rsvp-choice-btn" onclick="handlePresence(false)">К сожалению, нет</button>
+            </div>
+            </div>
 
-        <!-- Шаг 4: Выбор алкоголя -->
-        <div class="rsvp-step" id="step-4">
-        <p class="rsvp-question">Какие напитки предпочитаете?</p>
-        <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" id="wine-dry-white" value="Вино сухое белое">
-            <label class="form-check-label rsvp-checkbox-label" for="wine-dry-white">Вино сухое белое</label>
-        </div>
-        <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" id="wine-semisweet-red" value="Вино полусладкое красное">
-            <label class="form-check-label rsvp-checkbox-label" for="wine-semisweet-red">Вино полусладкое красное</label>
-        </div>
-        <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" id="wine-semisweet-white" value="Вино полусладкое белое">
-            <label class="form-check-label rsvp-checkbox-label" for="wine-semisweet-white">Вино полусладкое белое</label>
-        </div>
-        <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" id="samogon" value="Самогонка">
-            <label class="form-check-label rsvp-checkbox-label" for="samogon">Самогонка</label>
-        </div>
-        <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" id="vodka" value="Водка">
-            <label class="form-check-label rsvp-checkbox-label" for="vodka">Водка</label>
-        </div>
-        <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="whiskey" value="Виски">
-            <label class="form-check-label rsvp-checkbox-label" for="whiskey">Виски</label>
-        </div>
-        <button type="button" class="btn rsvp-btn" onclick="submitForm()">Отправить</button>
-        </div>
+            <!-- Шаг 3: Алкоголь -->
+            <div class="rsvp-step" id="step-3">
+            <p class="rsvp-question">Будете ли вы употреблять алкоголь?</p>
+            <div class="btn-group d-flex flex-column gap-2" role="group">
+                <button type="button" class="btn rsvp-choice-btn" onclick="handleAlcohol(true)">Да</button>
+                <button type="button" class="btn rsvp-choice-btn" onclick="handleAlcohol(false)">Нет</button>
+            </div>
+            </div>
 
-        <!-- Результат: Спасибо -->
-        <div class="rsvp-step text-center" id="step-thanks">
-        <h3 class="rsvp-thanks-title">Спасибо за ответ!</h3>
-        <p class="rsvp-thanks-text mt-2">Мы будем ждать вас ❤️</p>
-        </div>
+            <!-- Шаг 4: Выбор алкоголя -->
+            <div class="rsvp-step" id="step-4">
+            <p class="rsvp-question">Какие напитки предпочитаете?</p>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="wine-dry-white" value="Вино сухое белое">
+                <label class="form-check-label rsvp-checkbox-label" for="wine-dry-white">Вино сухое белое</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="wine-semisweet-red" value="Вино полусладкое красное">
+                <label class="form-check-label rsvp-checkbox-label" for="wine-semisweet-red">Вино полусладкое красное</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="wine-semisweet-white" value="Вино полусладкое белое">
+                <label class="form-check-label rsvp-checkbox-label" for="wine-semisweet-white">Вино полусладкое белое</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="samogon" value="Самогонка">
+                <label class="form-check-label rsvp-checkbox-label" for="samogon">Самогонка</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="vodka" value="Водка">
+                <label class="form-check-label rsvp-checkbox-label" for="vodka">Водка</label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="whiskey" value="Виски">
+                <label class="form-check-label rsvp-checkbox-label" for="whiskey">Виски</label>
+            </div>
+            <button type="button" class="btn rsvp-btn" onclick="submitForm()">Отправить</button>
+            </div>
 
-        <!-- Результат: Отказ -->
-        <div class="rsvp-step text-center" id="step-no">
-        <h3 class="rsvp-thanks-title">Спасибо за ответ!</h3>
-        <p class="rsvp-thanks-text mt-2">Нам будет очень не хватать Вас на нашем празднике....</p>
+            <!-- Результат: Спасибо -->
+            <div class="rsvp-step text-center" id="step-thanks">
+            <h3 class="rsvp-thanks-title">Спасибо за ответ!</h3>
+            <p class="rsvp-thanks-text mt-2">Мы будем ждать вас ❤️</p>
+            </div>
+
+            <!-- Результат: Отказ -->
+            <div class="rsvp-step text-center" id="step-no">
+            <h3 class="rsvp-thanks-title">Спасибо за ответ!</h3>
+            <p class="rsvp-thanks-text mt-2">Нам будет очень не хватать Вас на нашем празднике....</p>
+            </div>
         </div>
-    </div>
     </div>
 
 
@@ -420,5 +421,15 @@
 
 
     <script src="./scripts/countdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    // Инициализация AOS
+    AOS.init({
+        duration: 800, // длительность анимации
+        once: true, // анимация только один раз
+        offset: 100, // отступ от края экрана
+        easing: 'ease-out-cubic', // плавность
+    });
+    </script>
 </body>
 </html>
