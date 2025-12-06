@@ -538,7 +538,7 @@ span, p {
 .heart {
   position: absolute;
   font-size: 3rem; 
-  color: var(--accent-color);
+  color: #E8C9C7;
   opacity: 0;
   line-height: 1;
 }
@@ -997,9 +997,9 @@ span, p {
   transform: translateY(-2px);
 }
 
-.form-label{
+/* .form-label{
   font-size: 22px;
-}
+} */
 
 .rsvp-choice-btn {
   background: var(--bg-color);
