@@ -226,10 +226,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('confirmBtn').addEventListener('click', async function () {
       const message = `
-  💍 *Свадьба Светланы и Вячеслава — 27.02.2026*  
-  👤 Имя: ${guestName}
+      💍 *Свадьба Светланы и Вячеслава — 27.02.2026*  
+      Подвержение присутсвия на свадьбе
 
-  Дата прохождения ${new Date().toLocaleString('ru-RU')}
+      👤 Имя: ${guestName}
+
+      Дата прохождения ${new Date().toLocaleString('ru-RU')}
       `.trim();
 
       const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
