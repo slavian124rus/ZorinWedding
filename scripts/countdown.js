@@ -1,3 +1,6 @@
+
+
+
 // Обратный отсчёт до 27 февраля 2026, 15:30
 document.addEventListener('DOMContentLoaded', function () {
   const targetDate = new Date('2026-02-27T15:30:00').getTime();
@@ -203,5 +206,57 @@ function submitForm() {
   showStep('step-thanks');
 }
 
+// === Режим подтверждения по ссылке (ConfirmSession) ===
+document.addEventListener('DOMContentLoaded', function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const isConfirmSession = urlParams.get('ConfirmSession') === 'true';
+  const guestName = urlParams.get('name') || 'родные и близкие';
 
+  if (isConfirmSession) {
+    document.body.classList.add('confirm-session-mode');
+
+    const overlay = document.createElement('div');
+    overlay.className = 'confirm-session-overlay';
+    overlay.innerHTML = `
+      <h2 class="confirm-session-title">${guestName}!<br>Подтвердите, пожалуйста, участие на нашей свадьбе</h2>
+      <button id="confirmBtn">Подтвердить участие</button>
+      <div id="result"></div>
+    `;
+    document.body.appendChild(overlay);
+
+    document.getElementById('confirmBtn').addEventListener('click', async function () {
+      const message = `
+  💍 *Свадьба Светланы и Вячеслава — 27.02.2026*  
+  👤 Имя: ${guestName}
+
+  Дата прохождения ${new Date().toLocaleString('ru-RU')}
+      `.trim();
+
+      const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown'
+          })
+        });
+
+        const resultDiv = document.getElementById('result');
+        if (response.ok) {
+          document.getElementById('confirmBtn').style.display = 'none';
+          resultDiv.innerHTML = '<h2 class="confirm-session-title"> Спасибо за подтверждение! ❤️<br>Мы будем ждать вас!</h2>';
+        } else {
+          throw new Error('Ошибка Telegram API');
+        }
+      } catch (err) {
+        console.error('Ошибка отправки:', err);
+        document.getElementById('result').innerHTML = '❌ Не удалось отправить. Попробуйте позже.';
+      }
+    });
+  }
+});
 
