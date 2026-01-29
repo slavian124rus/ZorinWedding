@@ -210,7 +210,10 @@ function submitForm() {
 document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
   const isConfirmSession = urlParams.get('ConfirmSession') === 'true';
-  const guestName = urlParams.get('name') || 'родные и близкие';
+  const rawName = urlParams.get('name');
+  const guestName = rawName 
+    ? decodeURIComponent(rawName.replace(/\+/g, ' ')) 
+    : 'родные и близкие';
 
   if (isConfirmSession) {
     document.body.classList.add('confirm-session-mode');
