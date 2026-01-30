@@ -1198,6 +1198,21 @@ body.confirm-session-mode > *:not(.confirm-session-overlay) {
   text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
+#declineBtn {
+  background-color: rgb(228, 212, 195);
+  color: #333;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Lady Marmalade', sans-serif;
+}
+
+#declineBtn:hover {
+  opacity: 0.9;
+}
+
 #confirmBtn {
   background-color: rgb(228, 212, 195);
   color: #333;

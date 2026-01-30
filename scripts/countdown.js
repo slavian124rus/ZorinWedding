@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <h2 class="confirm-session-title">${guestName}!<br>Подтвердите, пожалуйста, участие на нашей свадьбе</h2>
       <div class="confirm-buttons">
         <button id="confirmBtn">Подвердить участие!</button>
-        <button id="confirmBtn">Не смогу присутствовать</button>
+        <button id="declineBtn">Не смогу присутствовать</button>
       </div>
       <div id="result"></div>
     `;
