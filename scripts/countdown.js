@@ -223,8 +223,8 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.innerHTML = `
       <h2 class="confirm-session-title">${guestName}!<br>Подтвердите, пожалуйста, участие на нашей свадьбе</h2>
       <div class="confirm-buttons">
-        <button id="confirmBtn">✅ Подтверждаю</button>
-        <button id="declineBtn">❌ Не смогу</button>
+        <button id="confirmBtn">Подвердить участие!</button>
+        <button id="confirmBtn">Не смогу присутствовать</button>
       </div>
       <div id="result"></div>
     `;
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Кнопка "Подтверждаю"
     document.getElementById('confirmBtn').addEventListener('click', () => {
-      sendStatus('Подвердить участвие!');
+      sendStatus('Подвердить участие!');
     });
 
     // Кнопка "Не смогу"
