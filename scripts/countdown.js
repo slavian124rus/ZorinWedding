@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultDiv = document.getElementById('result');
         if (response.ok) {
           document.querySelector('.confirm-buttons').style.display = 'none';
-          resultDiv.innerHTML = statusText === 'Буду!'
+          resultDiv.innerHTML = statusText === 'Подвердить участие!'
             ? '<h2 class="confirm-session-title">Спасибо за подтверждение! ❤️<br>Мы будем ждать вас!</h2>'
             : '<h2 class="confirm-session-title">Жаль, что вы не сможете прийти 😢<br>Но спасибо, что сообщили!</h2>';
         } else {
