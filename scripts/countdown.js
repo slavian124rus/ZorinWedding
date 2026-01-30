@@ -222,19 +222,23 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.className = 'confirm-session-overlay';
     overlay.innerHTML = `
       <h2 class="confirm-session-title">${guestName}!<br>Подтвердите, пожалуйста, участие на нашей свадьбе</h2>
-      <button id="confirmBtn">Подтвердить участие</button>
+      <div class="confirm-buttons">
+        <button id="confirmBtn">✅ Подтверждаю</button>
+        <button id="declineBtn">❌ Не смогу</button>
+      </div>
       <div id="result"></div>
     `;
     document.body.appendChild(overlay);
 
-    document.getElementById('confirmBtn').addEventListener('click', async function () {
+    // Общая функция отправки статуса
+    async function sendStatus(statusText) {
       const message = `
-      💍 *Свадьба Светланы и Вячеслава — 27.02.2026*  
-      Подвержение присутсвия на свадьбе
+💍 *Свадьба Светланы и Вячеслава — 27.02.2026*  
+Подтверждение участия
 
-      👤 Имя: ${guestName}
-
-      Дата прохождения ${new Date().toLocaleString('ru-RU')}
+👤 Имя: ${guestName}
+📊 Ответ: ${statusText}
+📅 Дата: ${new Date().toLocaleString('ru-RU')}
       `.trim();
 
       const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
@@ -252,8 +256,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const resultDiv = document.getElementById('result');
         if (response.ok) {
-          document.getElementById('confirmBtn').style.display = 'none';
-          resultDiv.innerHTML = '<h2 class="confirm-session-title"> Спасибо за подтверждение! ❤️<br>Мы будем ждать вас!</h2>';
+          document.querySelector('.confirm-buttons').style.display = 'none';
+          resultDiv.innerHTML = statusText === 'Буду!'
+            ? '<h2 class="confirm-session-title">Спасибо за подтверждение! ❤️<br>Мы будем ждать вас!</h2>'
+            : '<h2 class="confirm-session-title">Жаль, что вы не сможете прийти 😢<br>Но спасибо, что сообщили!</h2>';
         } else {
           throw new Error('Ошибка Telegram API');
         }
@@ -261,6 +267,16 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Ошибка отправки:', err);
         document.getElementById('result').innerHTML = '❌ Не удалось отправить. Попробуйте позже.';
       }
+    }
+
+    // Кнопка "Подтверждаю"
+    document.getElementById('confirmBtn').addEventListener('click', () => {
+      sendStatus('Подвердить участвие!');
+    });
+
+    // Кнопка "Не смогу"
+    document.getElementById('declineBtn').addEventListener('click', () => {
+      sendStatus('Не смогу присутствовать');
     });
   }
 });
