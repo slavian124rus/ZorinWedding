@@ -1207,6 +1207,7 @@ body.confirm-session-mode > *:not(.confirm-session-overlay) {
   font-size: 18px;
   cursor: pointer;
   font-family: 'Lady Marmalade', sans-serif;
+  margin-top: 10px;
 }
 
 #declineBtn:hover {
@@ -1222,6 +1223,7 @@ body.confirm-session-mode > *:not(.confirm-session-overlay) {
   font-size: 18px;
   cursor: pointer;
   font-family: 'Lady Marmalade', sans-serif;
+  margin-top: 10px;
 }
 
 #confirmBtn:hover {
