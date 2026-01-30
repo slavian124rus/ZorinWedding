@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.innerHTML = `
       <h2 class="confirm-session-title">${guestName}!<br>Подтвердите, пожалуйста, участие на нашей свадьбе</h2>
       <div class="confirm-buttons">
-        <button id="confirmBtn">Подвердить участие!</button>
+        <button id="confirmBtn">Подтверждаю участие</button>
         <button id="declineBtn">Не смогу присутствовать</button>
       </div>
       <div id="result"></div>
@@ -231,7 +231,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(overlay);
 
     // Общая функция отправки статуса
-    async function sendStatus(statusText) {
+    async function sendStatus(isAttending) {
+      const statusText = isAttending ? 'Буду!' : 'Не смогу приехать';
       const message = `
 💍 *Свадьба Светланы и Вячеслава — 27.02.2026*  
 Подтверждение участия
@@ -241,6 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
 📅 Дата: ${new Date().toLocaleString('ru-RU')}
       `.trim();
 
+      // ⚠️ Уберите лишние пробелы в URL!
       const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
       try {
@@ -257,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultDiv = document.getElementById('result');
         if (response.ok) {
           document.querySelector('.confirm-buttons').style.display = 'none';
-          resultDiv.innerHTML = statusText === 'Подвердить участие!'
+          resultDiv.innerHTML = isAttending
             ? '<h2 class="confirm-session-title">Спасибо за подтверждение! ❤️<br>Мы будем ждать вас!</h2>'
             : '<h2 class="confirm-session-title">Жаль, что вы не сможете прийти 😢<br>Но спасибо, что сообщили!</h2>';
         } else {
@@ -269,14 +271,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Кнопка "Подтверждаю"
     document.getElementById('confirmBtn').addEventListener('click', () => {
-      sendStatus('Подвердить участие!');
+      sendStatus(true); // ✅ Гость придет
     });
 
-    // Кнопка "Не смогу"
     document.getElementById('declineBtn').addEventListener('click', () => {
-      sendStatus('Не смогу присутствовать');
+      sendStatus(false); // ❌ Гость не придет
     });
   }
 });
